@@ -1,2 +1,102 @@
-/* styles.css — Estilos personalizados para Web Sanchez e Hijos */
-/* Se desarrollará en tareas posteriores */
+/* ============================================================
+   styles.css — Estilos globales para Web Sanchez e Hijos
+   Complementa Bootstrap 4.5.2. Solo lo que Bootstrap no cubre.
+   ============================================================ */
+
+/* ---- TIPOGRAFÍAS ---- */
+/* Roboto Slab para headings, Open Sans para cuerpo (cargadas vía Google Fonts en el HTML) */
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    color: #2D3748; /* Texto principal — gris oscuro */
+    background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', Georgia, serif;
+    color: #1B2A4A; /* Azul oscuro — headings */
+}
+
+/* ---- NAVBAR ---- */
+/* Fondo azul oscuro con marca y links en blanco */
+
+.navbar {
+    background-color: #1B2A4A;
+}
+
+.navbar-brand {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #E67E22; /* Naranja señalización en hover */
+}
+
+.navbar .nav-item.active .nav-link {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* ---- FOOTER ---- */
+/* Fondo azul profundo con texto claro */
+
+.site-footer {
+    background-color: #0F1B33;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.site-footer p {
+    margin-bottom: 0.5rem;
+}
+
+.site-footer a {
+    color: #E67E22; /* Naranja señalización para links */
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* ---- ENLACES GLOBALES ---- */
+/* Naranja señalización como color de acento para links */
+
+a {
+    color: #E67E22;
+}
+
+a:hover {
+    color: #D35400; /* Naranja más oscuro en hover */
+}
+
+/* ---- SECCIONES ALTERNAS ---- */
+/* Clase utilitaria para fondo gris claro en secciones alternas */
+
+.section-light {
+    background-color: #F4F6F8;
+}
+
+/* ---- UTILIDADES ---- */
+/* Clase para texto con color acento (naranja señalización) */
+
+.text-accent {
+    color: #E67E22;
+}
+
+/* Clase para fondo acento */
+.bg-accent {
+    background-color: #E67E22;
+    color: #FFFFFF;
+}
