@@ -1,0 +1,18 @@
+# === Archivos de sistema ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+._*
+
+# === Editores e IDEs ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === Archivos temporales ===
+*.tmp
+*.bak
+*.log
