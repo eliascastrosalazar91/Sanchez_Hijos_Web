@@ -1,6 +1,6 @@
 # Web Sanchez e Hijos
 
-Sitio web estático para **Sanchez e Hijos**, empresa dedicada al mantenimiento de sistemas ferroviarios: obras civiles menores, reparación de sistemas de control automático, máquinas de cambio, sistemas de protección con barreras automáticas, y telemetría aplicada al monitoreo de sistemas ferroviarios.
+Sitio web estático para **Sánchez e Hijos SpA**, empresa dedicada al mantenimiento de sistemas ferroviarios: obras civiles menores, reparación de sistemas de control automático, máquinas de cambio, sistemas de protección con barreras automáticas, y telemetría aplicada al monitoreo de sistemas ferroviarios.
 
 ## Stack tecnológico
 
