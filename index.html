@@ -4,7 +4,7 @@
     <!-- Metadatos básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanchez e Hijos — Mantenimiento de Sistemas Ferroviarios</title>
+    <title>Sánchez e Hijos SpA — Mantenimiento de Sistemas Ferroviarios</title>
 
     <!-- Google Fonts: Roboto Slab (headings) + Open Sans (cuerpo) -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
@@ -18,48 +18,207 @@
 <body>
 
     <!-- ======== NAVBAR ======== -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <!-- Marca -->
-            <a class="navbar-brand" href="index.html">Sanchez e Hijos</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- Marca -->
+                <a class="navbar-brand" href="index.html">Sánchez e Hijos SpA</a>
 
-            <!-- Botón hamburguesa (responsive) -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Menú de navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Botón hamburguesa (responsive) -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Links de navegación -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
-                    </li>
-                </ul>
+                <!-- Links de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <!-- ======== FIN NAVBAR ======== -->
 
     <!-- ======== CONTENIDO PRINCIPAL ======== -->
     <main>
-        <!-- Contenido se desarrollará en Tarea 5 -->
+        <!-- ======== HERO SECTION ======== -->
+        <!-- Imagen de fondo con overlay oscuro, propuesta de valor y CTA -->
+        <section class="hero-section d-flex align-items-center">
+            <div class="hero-overlay"></div>
+            <div class="container text-center hero-content">
+                <h1 class="display-4 font-weight-bold">Sánchez e Hijos SpA</h1>
+                <p class="lead">
+                    Especialistas en mantenimiento integral de sistemas ferroviarios.<br>
+                    Garantizando la seguridad y continuidad operativa de la infraestructura ferroviaria.
+                </p>
+                <a href="pages/servicios.html" class="btn btn-accent btn-lg mt-3">
+                    Conozca nuestros servicios
+                </a>
+            </div>
+        </section>
+        <!-- ======== FIN HERO SECTION ======== -->
+
+        <!-- ======== SERVICIOS DESTACADOS ======== -->
+        <!-- 4 cards con imagen, título y descripción breve de servicios principales -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Nuestros Servicios</h2>
+                <div class="row justify-content-center">
+
+                    <!-- Card: Obras Civiles Menores -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="img/servicio-civil.jpg" class="card-img-top"
+                                alt="Obras civiles menores en entorno ferroviario">
+                            <div class="card-body">
+                                <h3 class="card-title">Obras Civiles Menores</h3>
+                                <p class="card-text">
+                                    Reparación y mantenimiento de infraestructura civil en entornos ferroviarios,
+                                    asegurando condiciones óptimas de operación.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card: Control Automático -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="img/servicio-control.jpg" class="card-img-top"
+                                alt="Sistema de control automático ferroviario">
+                            <div class="card-body">
+                                <h3 class="card-title">Control Automático</h3>
+                                <p class="card-text">
+                                    Reparación y mantenimiento de sistemas de control automático
+                                    para la gestión segura del tráfico ferroviario.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card: Máquinas de Cambio -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="img/servicio-cambio.jpg" class="card-img-top"
+                                alt="Máquina de cambio de vías ferroviarias">
+                            <div class="card-body">
+                                <h3 class="card-title">Máquinas de Cambio</h3>
+                                <p class="card-text">
+                                    Mantenimiento especializado de máquinas de cambio de vías,
+                                    garantizando desvíos seguros y confiables.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card: Barreras Automáticas -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="img/servicio-barreras.jpg" class="card-img-top"
+                                alt="Barrera automática de paso a nivel">
+                            <div class="card-body">
+                                <h3 class="card-title">Barreras Automáticas</h3>
+                                <p class="card-text">
+                                    Mantenimiento de sistemas de protección con barreras automáticas
+                                    en pasos a nivel, asegurando la seguridad de cruces ferroviarios.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card: Telemetría -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="img/servicio-telemetria.jpg" class="card-img-top"
+                                alt="Equipos de telemetría y monitoreo ferroviario">
+                            <div class="card-body">
+                                <h3 class="card-title">Telemetría</h3>
+                                <p class="card-text">
+                                    Monitoreo remoto de sistemas ferroviarios mediante telemetría,
+                                    permitiendo diagnóstico y respuesta en tiempo real.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- ======== FIN SERVICIOS DESTACADOS ======== -->
+
+        <!-- ======== ¿POR QUÉ ELEGIRNOS? ======== -->
+        <!-- Lista con viñetas (elemento obligatorio) sobre fondo alterno -->
+        <section class="section-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">¿Por qué elegirnos?</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <ul class="lead">
+                            <li class="mb-3">
+                                <strong>Experiencia comprobada:</strong> Años de trayectoria en mantenimiento
+                                de infraestructura ferroviaria crítica.
+                            </li>
+                            <li class="mb-3">
+                                <strong>Equipo técnico especializado:</strong> Profesionales capacitados en
+                                sistemas de señalización, control y telemetría ferroviaria.
+                            </li>
+                            <li class="mb-3">
+                                <strong>Cobertura integral:</strong> Desde obras civiles menores hasta
+                                monitoreo remoto, cubrimos todo el ciclo de mantenimiento.
+                            </li>
+                            <li class="mb-3">
+                                <strong>Compromiso con la seguridad:</strong> La seguridad operativa es
+                                nuestra prioridad en cada intervención.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== FIN ¿POR QUÉ ELEGIRNOS? ======== -->
+
+        <!-- ======== CTA FINAL ======== -->
+        <!-- Llamado a la acción con link interno a contacto + link externo (hipervínculo obligatorio) -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h2 class="mb-3">¿Necesita mantenimiento ferroviario confiable?</h2>
+                <p class="lead mb-4">
+                    Contáctenos y conversemos sobre cómo podemos ayudarle a mantener
+                    su infraestructura operativa y segura.
+                </p>
+                <a href="pages/contacto.html" class="btn btn-accent btn-lg">
+                    Contáctenos
+                </a>
+                <p class="mt-4">
+                    <small>
+                        Trabajamos con los principales operadores ferroviarios del país.
+                        Conozca más sobre el sistema ferroviario chileno en
+                        <a href="https://www.efe.cl/" target="_blank" rel="noopener noreferrer">
+                            Empresa de los Ferrocarriles del Estado (EFE)
+                        </a>.
+                    </small>
+                </p>
+            </div>
+        </section>
+        <!-- ======== FIN CTA FINAL ======== -->
     </main>
     <!-- ======== FIN CONTENIDO PRINCIPAL ======== -->
 
     <!-- ======== FOOTER ======== -->
     <footer class="site-footer">
         <div class="container text-center">
-            <p>&copy; 2026 Sanchez e Hijos. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Sánchez e Hijos SpA. Todos los derechos reservados.</p>
             <p>
                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                     Ver repositorio en GitHub

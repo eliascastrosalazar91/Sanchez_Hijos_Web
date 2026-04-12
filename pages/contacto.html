@@ -4,7 +4,7 @@
     <!-- Metadatos básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto — Sanchez e Hijos</title>
+    <title>Contacto — Sánchez e Hijos SpA</title>
 
     <!-- Google Fonts: Roboto Slab (headings) + Open Sans (cuerpo) -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
@@ -18,48 +18,155 @@
 <body>
 
     <!-- ======== NAVBAR ======== -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <!-- Marca -->
-            <a class="navbar-brand" href="../index.html">Sanchez e Hijos</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- Marca -->
+                <a class="navbar-brand" href="../index.html">Sánchez e Hijos SpA</a>
 
-            <!-- Botón hamburguesa (responsive) -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Menú de navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Botón hamburguesa (responsive) -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Links de navegación -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
+                <!-- Links de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <!-- ======== FIN NAVBAR ======== -->
 
     <!-- ======== CONTENIDO PRINCIPAL ======== -->
     <main>
-        <!-- Contenido se desarrollará en Tarea 8 -->
+
+        <!-- Sección: Formulario de contacto + Info de contacto -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Contáctenos</h2>
+                <p class="text-center mb-5">
+                    ¿Tiene consultas sobre nuestros servicios o necesita una cotización?
+                    Complete el formulario y nos pondremos en contacto a la brevedad.
+                </p>
+
+                <div class="row">
+
+                    <!-- Columna izquierda: Formulario -->
+                    <div class="col-md-7 mb-4">
+                        <form action="#" method="post">
+
+                            <!-- Campo: Nombre completo -->
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre"
+                                    placeholder="Ej: Juan Pérez" required>
+                            </div>
+
+                            <!-- Campo: Correo electrónico -->
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Ej: juan.perez@empresa.cl" required>
+                            </div>
+
+                            <!-- Campo: Teléfono -->
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono"
+                                    placeholder="Ej: +56 9 1234 5678">
+                            </div>
+
+                            <!-- Campo: Asunto (select) -->
+                            <div class="form-group">
+                                <label for="asunto">Asunto</label>
+                                <select class="form-control" id="asunto" name="asunto" required>
+                                    <option value="" disabled selected>Seleccione un asunto</option>
+                                    <option value="cotizacion">Solicitud de cotización</option>
+                                    <option value="informacion">Información de servicios</option>
+                                    <option value="soporte">Soporte técnico</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <!-- Campo: Mensaje -->
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
+                                        placeholder="Describa brevemente su consulta o requerimiento" required></textarea>
+                            </div>
+
+                            <!-- Botón Enviar -->
+                            <button type="submit" class="btn btn-accent btn-block">Enviar mensaje</button>
+                        </form>
+                    </div>
+
+                    <!-- Columna derecha: Información de contacto -->
+                    <div class="col-md-5 mb-4">
+                        <div class="contact-info p-4">
+                            <h3 class="mb-3">Información de contacto</h3>
+
+                            <!-- Dirección -->
+                            <div class="mb-3">
+                                <strong>Dirección:</strong><br>
+                                Rafael Sotomayor 276<br>
+                                Chillán, Chile
+                            </div>
+
+                            <!-- Teléfono -->
+                            <div class="mb-3">
+                                <strong>Teléfono:</strong><br>
+                                +56 9 6826 6198
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <strong>Correo electrónico:</strong><br>
+                                <a href="mailto:administracion@sanchezehijos.cl">administracion@sanchezehijos.cl</a>
+                            </div>
+
+                            <!-- Horario -->
+                            <div class="mb-3">
+                                <strong>Horario de atención:</strong><br>
+                                Lunes a Viernes, 08:00 – 18:00 hrs
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Ubicación -->
+        <section class="section-light py-5">
+            <div class="container text-center">
+                <h2 class="mb-4">Nuestra ubicación</h2>
+                <img src="../img/ubicacion.jpg" alt="Mapa de ubicación de Sanchez e Hijos"
+                    class="img-fluid rounded shadow-sm">
+            </div>
+        </section>
+
     </main>
     <!-- ======== FIN CONTENIDO PRINCIPAL ======== -->
 
     <!-- ======== FOOTER ======== -->
     <footer class="site-footer">
         <div class="container text-center">
-            <p>&copy; 2026 Sanchez e Hijos. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Sánchez e Hijos SpA. Todos los derechos reservados.</p>
             <p>
                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                     Ver repositorio en GitHub

@@ -100,3 +100,129 @@ a:hover {
     background-color: #E67E22;
     color: #FFFFFF;
 }
+
+/* ---- HERO SECTION ---- */
+/* Imagen de fondo a ancho completo con overlay oscuro semitransparente */
+
+.hero-section {
+    position: relative;
+    min-height: 80vh;
+    background: url('../img/hero-bg.jpg') center center / cover no-repeat;
+    color: #FFFFFF;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 27, 51, 0.7); /* Azul profundo semitransparente */
+}
+
+.hero-content {
+    position: relative; /* Para que quede sobre el overlay */
+    z-index: 1;
+}
+
+.hero-section h1 {
+    color: #FFFFFF;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ---- BOTÓN ACENTO ---- */
+/* Botón naranja señalización para CTAs principales */
+
+.btn-accent {
+    background-color: #E67E22;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    background-color: #D35400;
+    color: #FFFFFF;
+}
+
+/* ---- CARDS DE SERVICIOS ---- */
+/* Sombra sutil y transición suave al hacer hover */
+
+.card {
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    color: #1B2A4A;
+}
+
+/* ---- TABLA DE SERVICIOS ---- */
+/* Estilo para la tabla resumen de servicios en servicios.html */
+
+.table-servicios {
+    background-color: #FFFFFF;
+}
+
+.table-servicios thead th {
+    background-color: #1B2A4A; /* Azul oscuro — encabezado */
+    color: #FFFFFF;
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-weight: 700;
+    border: none;
+}
+
+.table-servicios tbody td {
+    vertical-align: middle;
+    border-color: #E2E8F0; /* Gris claro para bordes */
+}
+
+.table-servicios tbody tr:hover {
+    background-color: #F4F6F8; /* Fondo gris claro en hover */
+}
+
+/* ---- NOSOTROS — ÁREAS DE EXPERTISE ---- */
+/* Espaciado extra entre items de la lista de expertise */
+
+.expertise-list li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+
+/* ---- CONTACTO — INFO DE CONTACTO ---- */
+/* Caja con fondo gris claro para la información de contacto */
+
+.contact-info {
+    background-color: #F4F6F8;
+    border-radius: 6px;
+    height: 100%;
+}
+
+.contact-info h3 {
+    font-size: 1.3rem;
+}
+
+/* ---- CONTACTO — FORMULARIO ---- */
+/* Estilo para labels del formulario */
+
+form label {
+    font-weight: 600;
+    color: #1B2A4A;
+}
+
+form .form-control:focus {
+    border-color: #E67E22; /* Naranja señalización en focus */
+    box-shadow: 0 0 0 0.2rem rgba(230, 126, 34, 0.25);
+}

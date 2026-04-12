@@ -4,7 +4,7 @@
     <!-- Metadatos básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios — Sanchez e Hijos</title>
+    <title>Servicios — Sánchez e Hijos SpA</title>
 
     <!-- Google Fonts: Roboto Slab (headings) + Open Sans (cuerpo) -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
@@ -18,48 +18,271 @@
 <body>
 
     <!-- ======== NAVBAR ======== -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <!-- Marca -->
-            <a class="navbar-brand" href="../index.html">Sanchez e Hijos</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- Marca -->
+                <a class="navbar-brand" href="../index.html">Sánchez e Hijos SpA</a>
 
-            <!-- Botón hamburguesa (responsive) -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Menú de navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Botón hamburguesa (responsive) -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Links de navegación -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
+                <!-- Links de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <!-- ======== FIN NAVBAR ======== -->
 
     <!-- ======== CONTENIDO PRINCIPAL ======== -->
     <main>
-        <!-- Contenido se desarrollará en Tarea 6 -->
+
+        <!-- ==== SECCIÓN INTRO ==== -->
+        <!-- Párrafo introductorio sobre la gama de servicios -->
+        <section class="py-5">
+            <div class="container">
+                <h1 class="mb-4">Nuestros Servicios</h1>
+                <p class="lead">
+                    En <strong>Sánchez e Hijos SpA</strong> ofrecemos soluciones integrales de mantenimiento
+                    para infraestructura ferroviaria. Nuestro equipo técnico especializado cubre desde
+                    obras civiles menores hasta sistemas de telemetría avanzada, garantizando la seguridad
+                    y continuidad operativa de cada proyecto.
+                </p>
+            </div>
+        </section>
+        <!-- ==== FIN SECCIÓN INTRO ==== -->
+
+        <!-- ==== TABLA RESUMEN DE SERVICIOS ==== -->
+        <!-- Tabla HTML con 5 servicios: columnas Servicio, Descripción, Ámbito -->
+        <section class="section-light py-5">
+            <div class="container">
+                <h2 class="mb-4">Resumen de Servicios</h2>
+                <div class="table-responsive">
+                    <table class="table table-servicios">
+                        <thead>
+                            <tr>
+                                <th>Servicio</th>
+                                <th>Descripción</th>
+                                <th>Ámbito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Obras Civiles Menores</td>
+                                <td>Construcción y reparación de infraestructura complementaria en entornos ferroviarios.</td>
+                                <td>Vías, estaciones, pasos nivel</td>
+                            </tr>
+                            <tr>
+                                <td>Control Automático</td>
+                                <td>Mantenimiento y reparación de sistemas de señalización y control automático de tráfico ferroviario.</td>
+                                <td>Señalización, enclavamientos</td>
+                            </tr>
+                            <tr>
+                                <td>Máquinas de Cambio</td>
+                                <td>Instalación, ajuste y reparación de máquinas de cambio para desvío de vías.</td>
+                                <td>Desvíos, patios de maniobra</td>
+                            </tr>
+                            <tr>
+                                <td>Barreras Automáticas</td>
+                                <td>Mantenimiento de sistemas de protección con barreras automáticas en pasos a nivel.</td>
+                                <td>Pasos a nivel, cruces</td>
+                            </tr>
+                            <tr>
+                                <td>Telemetría</td>
+                                <td>Implementación y mantenimiento de sistemas de monitoreo remoto para infraestructura ferroviaria.</td>
+                                <td>Monitoreo remoto, sensores</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- ==== FIN TABLA RESUMEN ==== -->
+
+        <!-- ==== DETALLE POR SERVICIO ==== -->
+        <!-- Cada servicio con imagen, descripción expandida y lista numerada -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="mb-5">Detalle de Servicios</h2>
+
+                <!-- Servicio 1: Obras Civiles Menores -->
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <img src="../img/servicio-civil.jpg" alt="Obras civiles menores en entorno ferroviario"
+                            class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Obras Civiles Menores</h3>
+                        <p>
+                            Ejecutamos trabajos de construcción y reparación de infraestructura complementaria
+                            en entornos ferroviarios, asegurando el cumplimiento de normativas de seguridad
+                            y los estándares técnicos del sector.
+                        </p>
+                        <!-- Lista numerada: actividades típicas -->
+                        <p class="mb-2"><strong>Actividades típicas:</strong></p>
+                        <ol>
+                            <li>Reparación de bases y fundaciones de equipos de vía</li>
+                            <li>Construcción de canalizaciones para cableado de señalización</li>
+                            <li>Mantenimiento de casetas técnicas y recintos de equipos</li>
+                            <li>Trabajos de albañilería y hormigón en pasos a nivel</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Control Automático -->
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <img src="../img/servicio-control.jpg" alt="Sistema de control automático ferroviario"
+                            class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Control Automático</h3>
+                        <p>
+                            Mantenemos y reparamos los sistemas de señalización y control automático que
+                            regulan el tráfico ferroviario, garantizando su funcionamiento continuo y seguro.
+                        </p>
+                        <!-- Lista numerada: actividades típicas -->
+                        <p class="mb-2"><strong>Actividades típicas:</strong></p>
+                        <ol>
+                            <li>Diagnóstico y reparación de circuitos de vía</li>
+                            <li>Mantenimiento de sistemas de enclavamiento</li>
+                            <li>Calibración de equipos de señalización luminosa</li>
+                            <li>Revisión de cableado y conexiones eléctricas de control</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Máquinas de Cambio -->
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <img src="../img/servicio-cambio.jpg" alt="Máquina de cambio de vías ferroviarias"
+                            class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Máquinas de Cambio</h3>
+                        <p>
+                            Realizamos la instalación, ajuste y reparación de máquinas de cambio que permiten
+                            el desvío controlado de trenes entre vías, un componente crítico para la operación
+                            ferroviaria segura.
+                        </p>
+                        <!-- Lista numerada: actividades típicas -->
+                        <p class="mb-2"><strong>Actividades típicas:</strong></p>
+                        <ol>
+                            <li>Instalación y montaje de nuevas máquinas de cambio</li>
+                            <li>Ajuste mecánico de agujas y mecanismos de desvío</li>
+                            <li>Mantenimiento preventivo y correctivo de motores</li>
+                            <li>Verificación de posición y detección de fallas</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Barreras Automáticas -->
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <img src="../img/servicio-barreras.jpg" alt="Barrera automática de paso a nivel"
+                            class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Barreras Automáticas</h3>
+                        <p>
+                            Mantenemos los sistemas de protección con barreras automáticas en pasos a nivel,
+                            asegurando la detección oportuna de trenes y el cierre seguro del cruce para
+                            proteger a vehículos y peatones.
+                        </p>
+                        <!-- Lista numerada: actividades típicas -->
+                        <p class="mb-2"><strong>Actividades típicas:</strong></p>
+                        <ol>
+                            <li>Mantenimiento de mecanismos de elevación y descenso de barreras</li>
+                            <li>Revisión de sensores de detección de tren</li>
+                            <li>Reparación de sistemas de alarma sonora y luminosa</li>
+                            <li>Pruebas funcionales de secuencia completa de protección</li>
+                        </ol>
+                        <!-- Lista con viñetas: componentes clave -->
+                        <p class="mb-2 mt-3"><strong>Componentes clave del sistema:</strong></p>
+                        <ul>
+                            <li>Barreras con contrapeso y motor eléctrico</li>
+                            <li>Señales luminosas de advertencia (luces rojas intermitentes)</li>
+                            <li>Campanas o sirenas de alerta</li>
+                            <li>Detectores de ocupación de vía</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Telemetría -->
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <img src="../img/servicio-telemetria.jpg" alt="Equipos de telemetría y monitoreo ferroviario"
+                            class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Telemetría</h3>
+                        <p>
+                            Implementamos y mantenemos sistemas de telemetría para el monitoreo remoto en
+                            tiempo real de la infraestructura ferroviaria, permitiendo la detección temprana
+                            de anomalías y la toma de decisiones basada en datos.
+                        </p>
+                        <!-- Lista numerada: actividades típicas -->
+                        <p class="mb-2"><strong>Actividades típicas:</strong></p>
+                        <ol>
+                            <li>Instalación de sensores y equipos de adquisición de datos</li>
+                            <li>Configuración de sistemas de comunicación remota</li>
+                            <li>Mantenimiento de estaciones de monitoreo</li>
+                            <li>Diagnóstico y reemplazo de componentes de transmisión</li>
+                        </ol>
+                        <!-- Lista con viñetas: variables monitoreadas -->
+                        <p class="mb-2 mt-3"><strong>Variables monitoreadas:</strong></p>
+                        <ul>
+                            <li>Estado de máquinas de cambio y barreras</li>
+                            <li>Temperatura y vibración de equipos críticos</li>
+                            <li>Niveles de tensión en circuitos de alimentación</li>
+                            <li>Alarmas y eventos del sistema de señalización</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ==== FIN DETALLE POR SERVICIO ==== -->
+
+        <!-- ==== CTA FINAL ==== -->
+        <!-- Llamada a la acción para contacto -->
+        <section class="section-light py-5">
+            <div class="container text-center">
+                <h2 class="mb-3">¿Necesita nuestros servicios?</h2>
+                <p class="lead mb-4">
+                    Contáctenos para evaluar su proyecto y entregar una solución a la medida
+                    de sus necesidades ferroviarias.
+                </p>
+                <a href="contacto.html" class="btn btn-accent btn-lg">Contáctenos</a>
+            </div>
+        </section>
+        <!-- ==== FIN CTA FINAL ==== -->
+
     </main>
     <!-- ======== FIN CONTENIDO PRINCIPAL ======== -->
 
     <!-- ======== FOOTER ======== -->
     <footer class="site-footer">
         <div class="container text-center">
-            <p>&copy; 2026 Sanchez e Hijos. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Sánchez e Hijos SpA. Todos los derechos reservados.</p>
             <p>
                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                     Ver repositorio en GitHub
