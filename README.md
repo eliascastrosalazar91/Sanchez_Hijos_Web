@@ -26,8 +26,9 @@ web-sanchez/
 
 ## Contexto
 
-Proyecto académico para el ramo de **Programación Frontend**. Sprint 1: sitio estático con HTML5, CSS3 y Bootstrap, sin JavaScript.
+Proyecto sitio web estático para la asignatura de **Programación Frontend**. Sprint 1: sitio estático con HTML5, CSS3 y Bootstrap, sin JavaScript.
 
 ## Autor
 
-Sanchez e Hijos — Mantenimiento de Sistemas Ferroviarios
+Elias Castro Salazar, para:
+Sánchez e Hijos SpA — Mantenimiento de Sistemas Ferroviarios
