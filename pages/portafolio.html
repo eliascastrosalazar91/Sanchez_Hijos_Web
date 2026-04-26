@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio — Sánchez e Hijos SpA</title>
+
+    <!-- Google Fonts: Roboto Slab (headings) + Open Sans (cuerpo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4.5.2 CSS vía CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Estilos personalizados (ruta relativa desde pages/) -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- ======== NAVBAR ======== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- Marca -->
+                <a class="navbar-brand" href="../index.html">Sánchez e Hijos SpA</a>
+
+                <!-- Botón hamburguesa (responsive) -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="portafolio.html">Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ======== FIN NAVBAR ======== -->
+
+    <!-- ======== CONTENIDO PRINCIPAL ======== -->
+    <main>
+
+        <!-- ==== SECCIÓN INTRO ==== -->
+        <!-- Párrafo introductorio sobre la trayectoria y los proyectos representativos -->
+        <section class="py-5">
+            <div class="container">
+                <h1 class="mb-4">Portafolio de Proyectos</h1>
+                <p class="lead">
+                    A lo largo de nuestra trayectoria hemos ejecutado proyectos en distintas zonas del país
+                    y en diversos ámbitos del mantenimiento ferroviario: obras civiles, control automático,
+                    máquinas de cambio, barreras automáticas y fabricación especializada. A continuación,
+                    una selección de iniciativas representativas de nuestro trabajo.
+                </p>
+            </div>
+        </section>
+        <!-- ==== FIN SECCIÓN INTRO ==== -->
+
+        <!-- ==== LISTADO DE PROYECTOS ==== -->
+        <!--
+            Grilla 3+2 (col-md-6 col-lg-4) con justify-content-center para centrar la fila inferior.
+            Cada tarjeta incluye: imagen, título, ubicación + año, descripción breve, descripción
+            extendida (oculta con atributo hidden) y botón "Leer más / Leer menos" (controlado por
+            js/portafolio.js mediante event delegation sobre el contenedor #lista-proyectos).
+        -->
+        <section class="section-light py-5">
+            <div class="container">
+                <h2 class="mb-4">Proyectos destacados</h2>
+                <!-- ==== BARRA DE FILTROS POR CATEGORÍA (Tarea 16) ==== -->
+                <!--
+                    Botones para filtrar las tarjetas del listado por categoría.
+                    Cada botón usa data-filtro con el valor de la categoría
+                    (o "todos" para el botón por defecto). La lógica vive en
+                    js/portafolio.js mediante delegation sobre #filtros-categoria.
+                    El botón activo se marca con la clase .active.
+                -->
+                <div id="filtros-categoria" class="filtros-categoria mb-4" role="group" aria-label="Filtrar proyectos por categoría">
+                    <button type="button" class="btn btn-sm btn-filtro js-filtro-categoria active" data-filtro="todos">Todos</button>
+                    <button type="button" class="btn btn-sm btn-filtro js-filtro-categoria" data-filtro="Obras civiles menores">Obras civiles menores</button>
+                    <button type="button" class="btn btn-sm btn-filtro js-filtro-categoria" data-filtro="Control automático">Control automático</button>
+                    <button type="button" class="btn btn-sm btn-filtro js-filtro-categoria" data-filtro="Máquinas de cambio">Máquinas de cambio</button>
+                    <button type="button" class="btn btn-sm btn-filtro js-filtro-categoria" data-filtro="Barreras automáticas">Barreras automáticas</button>
+                    <button type="button" class="btn btn-sm btn-filtro js-filtro-categoria" data-filtro="Telemetría">Telemetría</button>
+                </div>
+                <!-- ==== FIN BARRA DE FILTROS ==== -->
+                <div id="lista-proyectos" class="row justify-content-center">
+
+                    <!-- Proyecto 1: Granallado puentes -->
+                    <div class="col-md-6 col-lg-4 mb-4" data-categoria="Obras civiles menores">
+                        <article class="card h-100 shadow-sm proyecto-card">
+                            <img src="../img/puentes.jpg" class="card-img-top"
+                                 alt="Granallado de puentes ferroviarios en zona sur">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Granallado puentes</h3>
+                                <span class="badge badge-categoria">Obras civiles menores</span>
+                                <p class="card-meta">
+                                    Zona sur (Concepción - Osorno) · 2017
+                                </p>
+                                <p class="card-text">
+                                    Se realizó mantención preventiva a 20 puentes ferroviarios, retirando
+                                    capas de pintura con técnica de granallado.
+                                </p>
+                                <div class="mb-2">
+                                    <button type="button" class="btn btn-sm btn-accent js-leer-mas"
+                                            data-target="ext-1">
+                                        Leer más
+                                    </button>
+                                </div>
+                                <p class="proyecto-extendida" id="ext-1" hidden>
+                                    Programa de mantención preventiva ejecutado a lo largo del corredor sur
+                                    entre Concepción y Osorno, abarcando 20 puentes ferroviarios de distintas
+                                    tipologías estructurales. La intervención consistió en el retiro completo
+                                    de capas de pintura envejecida mediante granallado mecánico, dejando la
+                                    superficie metálica preparada para el posterior tratamiento anticorrosivo.
+                                    Los trabajos se coordinaron con ventanas de operación ferroviaria para
+                                    minimizar el impacto en el tráfico, e incluyeron acopio y disposición
+                                    controlada de los residuos generados.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Proyecto 2: Construcción Sede Social -->
+                    <div class="col-md-6 col-lg-4 mb-4" data-categoria="Obras civiles menores">
+                        <article class="card h-100 shadow-sm proyecto-card">
+                            <img src="../img/sede.jpg" class="card-img-top"
+                                 alt="Construcción de sede social en Chillán Viejo">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Construcción Sede Social</h3>
+                                <span class="badge badge-categoria">Obras civiles menores</span>
+                                <p class="card-meta">
+                                    Chillán Viejo · 2018
+                                </p>
+                                <p class="card-text">
+                                    Construcción en hormigón armado y tabiquería de Sede Social en Chillán
+                                    Viejo. El proyecto se entregó urbanizado.
+                                </p>
+                                <div class="mb-2">
+                                    <button type="button" class="btn btn-sm btn-accent js-leer-mas"
+                                            data-target="ext-2">
+                                        Leer más
+                                    </button>
+                                </div>                                
+                                <p class="proyecto-extendida" id="ext-2" hidden>
+                                    Obra de construcción ejecutada bajo modalidad llave en mano, incluyendo
+                                    movimiento de tierras, fundaciones, estructura de hormigón armado y muros
+                                    de tabiquería. La sede contempla espacios para reuniones comunitarias,
+                                    oficina administrativa y servicios higiénicos. La entrega incluyó la
+                                    urbanización del entorno inmediato (accesos, veredas y conexión a redes),
+                                    dejando el inmueble en condiciones plenas de uso para la organización
+                                    beneficiaria.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Proyecto 3: Reparación máquinas de cambio -->
+                    <div class="col-md-6 col-lg-4 mb-4" data-categoria="Máquinas de cambio">
+                        <article class="card h-100 shadow-sm proyecto-card">
+                            <img src="../img/maquinas.jpg" class="card-img-top"
+                                 alt="Reparación de máquinas de cambio en zona Araucanía">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Reparación máquinas de cambio</h3>
+                                <span class="badge badge-categoria">Máquinas de cambio</span>
+                                <p class="card-meta">
+                                    Zona Araucanía (Victoria - Lautaro - Temuco) · 2019
+                                </p>
+                                <p class="card-text">
+                                    Mantención de agujas y máquinas de cambio: retiro de equipos de la vía,
+                                    reparaciones mecánicas en taller, reemplazo de compresores y montaje
+                                    de los equipos en terreno.
+                                </p>
+                                <div class="mb-2">
+                                    <button type="button" class="btn btn-sm btn-accent js-leer-mas"
+                                            data-target="ext-3">
+                                        Leer más
+                                    </button>
+                                </div>
+                                <p class="proyecto-extendida" id="ext-3" hidden>
+                                    Campaña de mantención mayor desplegada en las estaciones de Victoria,
+                                    Lautaro y Temuco. Cada equipo fue desmontado en terreno, trasladado a
+                                    taller para diagnóstico y reparación mecánica integral, e intervenido en
+                                    sus componentes neumáticos mediante el reemplazo de los compresores
+                                    asociados. Tras las pruebas en banco, los equipos se reinstalaron en vía
+                                    y se sometieron a verificación funcional con el operador, devolviendo
+                                    cada cambio a servicio dentro de las ventanas programadas.
+                                </p>
+                                
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Proyecto 4: Barreras automáticas Laraquete -->
+                    <div class="col-md-6 col-lg-4 mb-4" data-categoria="Barreras automáticas">
+                        <article class="card h-100 shadow-sm proyecto-card">
+                            <img src="../img/barrera.jpg" class="card-img-top"
+                                 alt="Montaje de barreras automáticas en cruce Laraquete">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Montaje de barreras automáticas cruce Laraquete</h3>
+                                <span class="badge badge-categoria">Barreras automáticas</span>
+                                <p class="card-meta">
+                                    Laraquete · 2024
+                                </p>
+                                <p class="card-text">
+                                    Para importante cliente del rubro forestal/celulosa, se realizó diseño
+                                    de ingeniería, montaje y comisionamiento de nueva barrera automática en
+                                    cruces a nivel en Laraquete. El proyecto se entrega a conformidad de
+                                    toda la normativa ferroviaria vigente en Chile.
+                                </p>
+                                <div class="mb-2">
+                                    <button type="button" class="btn btn-sm btn-accent js-leer-mas"
+                                            data-target="ext-4">
+                                        Leer más
+                                    </button>
+                                </div>
+                                <p class="proyecto-extendida" id="ext-4" hidden>
+                                    Proyecto integral que cubrió las etapas de diseño de ingeniería,
+                                    fabricación, montaje en terreno y comisionamiento del sistema de
+                                    protección. La solución incluyó barreras motorizadas, señalización
+                                    luminosa y sonora, y la integración con los detectores de tren del
+                                    cruce. La entrega final se ejecutó bajo protocolo de pruebas conforme
+                                    a la normativa ferroviaria vigente en Chile, garantizando la operación
+                                    segura del paso a nivel.
+                                </p>
+                                
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Proyecto 5: Suministro de plumas de barrera -->
+                    <div class="col-md-6 col-lg-4 mb-4" data-categoria="Barreras automáticas">
+                        <article class="card h-100 shadow-sm proyecto-card">
+                            <img src="../img/plumas.jpg" class="card-img-top"
+                                 alt="Suministro de plumas de barrera en zona central">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Suministro de plumas de barrera</h3>
+                                <span class="badge badge-categoria">Barreras automáticas</span>
+                                <p class="card-meta">
+                                    Zona central · 2024
+                                </p>
+                                <p class="card-text">
+                                    Diseño de ingeniería, fabricación, embalaje y distribución de un lote
+                                    de 300 plumas de barrera construidas en material ligero, en conformidad
+                                    de toda la normativa ferroviaria vigente.
+                                </p>
+                                <div class="mb-2">
+                                    <button type="button" class="btn btn-sm btn-accent js-leer-mas"
+                                            data-target="ext-5">
+                                        Leer más
+                                    </button>
+                                </div>
+                                <p class="proyecto-extendida" id="ext-5" hidden>
+                                    Encargo de fabricación serial para reposición de plumas en cruces a
+                                    nivel de la zona central. El alcance abarcó el diseño de ingeniería del
+                                    producto, la fabricación de un lote de 300 unidades en material ligero,
+                                    el control de calidad por muestreo, el embalaje individual y la
+                                    distribución por tramos a los puntos de despliegue indicados por el
+                                    mandante. Cada pluma fue producida en conformidad de la normativa
+                                    ferroviaria vigente para asegurar su intercambiabilidad con los sistemas
+                                    existentes.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ==== FIN LISTADO DE PROYECTOS ==== -->
+
+        <!-- ==== AGREGAR NUEVO PROYECTO ==== -->
+        <!--
+            Mini-formulario para agregar dinámicamente un nuevo proyecto al listado.
+            La lógica de creación de la tarjeta vive en js/portafolio.js (Tarea 15).
+            Validación: 5 funciones JS por campo (.input-error + mensaje en <small>),
+                        complementan los atributos HTML5 (required, type, min/max, maxlength).
+                        novalidate evita que los tooltips nativos compitan con nuestros mensajes.
+        -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="mb-4">Agregar nuevo proyecto</h2>
+                <p>
+                    Completa los campos para incorporar un nuevo proyecto al portafolio.
+                    La nueva tarjeta se agregará al listado y heredará la funcionalidad
+                    "Leer más / Leer menos".
+                </p>
+
+                <form id="form-nuevo-proyecto" class="form-nuevo-proyecto" novalidate>
+
+                    <!-- Fila 1: Título (ancho completo) -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="np-titulo">Título del proyecto</label>
+                            <input type="text" id="np-titulo" name="titulo"
+                                class="form-control" maxlength="80"
+                                placeholder="Ej: Mantención preventiva de vías" required>
+                            <small id="error-np-titulo" class="form-text error-message" aria-live="polite"></small>
+                        </div>
+                    </div>
+
+                    <!-- Fila 2: Ubicación + Año + Categoría -->
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="np-ubicacion">Ubicación</label>
+                            <input type="text" id="np-ubicacion" name="ubicacion"
+                                class="form-control" maxlength="60"
+                                placeholder="Ej: Zona central" required>
+                            <small id="error-np-ubicacion" class="form-text error-message" aria-live="polite"></small>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="np-anio">Año</label>
+                            <input type="number" id="np-anio" name="anio"
+                                class="form-control" min="1900" max="2100"
+                                placeholder="Ej: 2026" required>
+                            <small id="error-np-anio" class="form-text error-message" aria-live="polite"></small>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="np-categoria">Categoría</label>
+                            <select id="np-categoria" name="categoria"
+                                    class="form-control" required>
+                                <option value="">Selecciona…</option>
+                                <option value="Obras civiles menores">Obras civiles menores</option>
+                                <option value="Control automático">Control automático</option>
+                                <option value="Máquinas de cambio">Máquinas de cambio</option>
+                                <option value="Barreras automáticas">Barreras automáticas</option>
+                                <option value="Telemetría">Telemetría</option>
+                            </select>
+                            <small id="error-np-categoria" class="form-text error-message" aria-live="polite"></small>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3: Descripción breve (ancho completo) -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="np-breve">Descripción breve</label>
+                            <textarea id="np-breve" name="breve"
+                                    class="form-control" rows="2" maxlength="240"
+                                    placeholder="Resumen del proyecto en 1–2 líneas" required></textarea>
+                            <small id="error-np-breve" class="form-text error-message" aria-live="polite"></small>
+                        </div>
+                    </div>
+
+                    <!-- Fila 4: Descripción extendida (opcional, sin validación) -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="np-extendida">Descripción extendida (opcional)</label>
+                            <textarea id="np-extendida" name="extendida"
+                                    class="form-control" rows="4" maxlength="800"
+                                    placeholder="Detalle del alcance, etapas, resultados…"></textarea>
+                            <small class="form-text text-muted">
+                                Si la dejas vacía, se mostrará nuevamente la descripción breve al expandir.
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Botón de envío -->
+                    <button type="submit" class="btn btn-accent">Agregar al portafolio</button>
+
+                </form>
+            </div>
+        </section>
+        <!-- ==== FIN AGREGAR NUEVO PROYECTO ==== -->
+
+    </main>
+    <!-- ======== FIN CONTENIDO PRINCIPAL ======== -->
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Sánchez e Hijos SpA. Todos los derechos reservados.</p>
+            <p>
+                <a href="https://github.com/eliascastrosalazar91/Sanchez_Hijos_Web" target="_blank" rel="noopener noreferrer">
+                    Ver repositorio en GitHub
+                </a>
+            </p>
+        </div>
+    </footer>
+    <!-- ======== FIN FOOTER ======== -->
+
+    <!-- Bootstrap JS: jQuery Slim + Popper.js + Bootstrap JS (solo para navbar responsive) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript propio del proyecto (Sprint 2) -->
+    <script src="../js/main.js"></script>
+    <script src="../js/portafolio.js"></script>
+
+</body>
+</html>

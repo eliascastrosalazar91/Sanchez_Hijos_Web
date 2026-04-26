@@ -226,3 +226,124 @@ form .form-control:focus {
     border-color: #E67E22; /* Naranja señalización en focus */
     box-shadow: 0 0 0 0.2rem rgba(230, 126, 34, 0.25);
 }
+
+/* ===== Validaciones del formulario de contacto ===== */
+
+/* Borde rojo en campos que no pasan la validación JS */
+form .form-control.input-error,
+form select.input-error {
+  border-color: #C0392B;
+  box-shadow: 0 0 0 0.2rem rgba(192, 57, 43, 0.15);
+}
+
+/* Mensaje de error inline bajo cada campo */
+.error-message {
+  color: #C0392B;
+  font-size: 0.875rem;
+  font-weight: 600;
+  min-height: 1.25rem; /* reserva el espacio para evitar saltos al mostrar/ocultar */
+}
+
+/* ===== Portafolio de proyectos ===== */
+
+/* Imagen uniforme en todas las tarjetas (recorte centrado) */
+.proyecto-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Metadata bajo el título: ubicación + año */
+.proyecto-card .card-meta {
+  font-size: 0.875rem;
+  color: #4A5568; /* Gris acero — texto secundario */
+  margin-bottom: 0.75rem;
+}
+
+/* Descripción extendida: borde lateral en naranja para diferenciarla visualmente.
+   Aparece debajo del botón "Leer más" cuando está expandida (Tarea 16 ajuste UI). */
+.proyecto-card .proyecto-extendida {
+  border-left: 3px solid #E67E22;
+  padding-left: 0.75rem;
+  margin-top: 0.25rem;   /* Pequeño respiro respecto al botón que ahora va arriba */
+  margin-bottom: 0;       /* Evita doble espacio cuando es el último elemento de la card */
+  color: #2D3748;
+}
+
+
+/* ===== Tarea 15: Badge de categoría en tarjetas de proyecto ===== */
+
+/* Badge visible con la categoría del proyecto, bajo el título de cada tarjeta */
+.badge-categoria {
+  display: inline-block;
+  align-self: flex-start;            /* No estira al ancho del card-body */
+  background-color: #1B2A4A;          /* Azul oscuro de marca */
+  color: #FFFFFF;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35em 0.65em;
+  margin-bottom: 0.6rem;
+  border-radius: 0.25rem;
+}
+
+/* ===== Tarea 15: Formulario "Agregar nuevo proyecto" ===== */
+
+/* Caja del formulario con borde sutil para separarlo del fondo blanco */
+.form-nuevo-proyecto {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid #E67E22;     /* Acento naranja en el borde izquierdo */
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+/* Refuerzo visual del botón principal del formulario */
+.form-nuevo-proyecto .btn-accent {
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+}
+
+/* ===== Tarea 16: Filtro de proyectos por categoría ===== */
+
+/* Barra contenedora de los botones de filtro */
+.filtros-categoria {
+  display: flex;
+  flex-wrap: wrap;        /* En móvil, los botones bajan a la línea siguiente */
+  gap: 0.5rem;            /* Separación entre botones */
+}
+
+/* Botón de filtro: estado por defecto (inactivo) */
+.btn-filtro {
+  background-color: #FFFFFF;
+  color: #1B2A4A;                 /* Azul oscuro de marca */
+  border: 1px solid #1B2A4A;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.35rem 0.85rem;
+}
+
+/* Hover/focus: feedback con el naranja de marca */
+.btn-filtro:hover,
+.btn-filtro:focus {
+  background-color: #E67E22;
+  color: #FFFFFF;
+  border-color: #E67E22;
+  box-shadow: 0 0 0 0.2rem rgba(230, 126, 34, 0.25);
+}
+
+/* Estado activo: el filtro actualmente aplicado */
+.btn-filtro.active {
+  background-color: #1B2A4A;
+  color: #FFFFFF;
+  border-color: #1B2A4A;
+}
+
+/* Mantenemos el estilo activo aunque el cursor pase encima */
+.btn-filtro.active:hover,
+.btn-filtro.active:focus {
+  background-color: #0F1B33;       /* Azul profundo (footer) */
+  border-color: #0F1B33;
+  color: #FFFFFF;
+}
