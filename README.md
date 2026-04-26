@@ -60,7 +60,7 @@ El sitio es 100 % estático: no requiere servidor, build ni instalación de depe
 
 ## Contexto
 
-Proyecto desarrollado para la asignatura de **Programación Frontend** (INACAP).
+Proyecto desarrollado para la asignatura de **Programación Frontend (TI3V31)**.
 
 - **Sprint 1** — Sitio estático con HTML5, CSS3 y Bootstrap.
 - **Sprint 2** — Incorporación de JavaScript Vanilla (ES6): validaciones del formulario de contacto y 3 funcionalidades dinámicas en el portafolio.
