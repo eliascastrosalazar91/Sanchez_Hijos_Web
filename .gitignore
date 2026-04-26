@@ -16,3 +16,6 @@ Desktop.ini
 *.tmp
 *.bak
 *.log
+
+# === Archivos rar ===
+*.rar
