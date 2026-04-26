@@ -83,7 +83,7 @@
         <section class="section-light py-5">
             <div class="container">
                 <h2 class="mb-4">Proyectos destacados</h2>
-                <!-- ==== BARRA DE FILTROS POR CATEGORÍA (Tarea 16) ==== -->
+                <!-- ==== BARRA DE FILTROS POR CATEGORÍA ==== -->
                 <!--
                     Botones para filtrar las tarjetas del listado por categoría.
                     Cada botón usa data-filtro con el valor de la categoría
@@ -288,7 +288,7 @@
         <!-- ==== AGREGAR NUEVO PROYECTO ==== -->
         <!--
             Mini-formulario para agregar dinámicamente un nuevo proyecto al listado.
-            La lógica de creación de la tarjeta vive en js/portafolio.js (Tarea 15).
+            La lógica de creación de la tarjeta vive en js/portafolio.js.
             Validación: 5 funciones JS por campo (.input-error + mensaje en <small>),
                         complementan los atributos HTML5 (required, type, min/max, maxlength).
                         novalidate evita que los tooltips nativos compitan con nuestros mensajes.
@@ -384,7 +384,7 @@
     <!-- ======== FOOTER ======== -->
     <footer class="site-footer">
         <div class="container text-center">
-            <p>&copy; 2026 Sánchez e Hijos SpA. Todos los derechos reservados.</p>
+            <p>&copy; <span id="anio-footer">2026</span> Sánchez e Hijos SpA. Todos los derechos reservados.</p>
             <p>
                 <a href="https://github.com/eliascastrosalazar91/Sanchez_Hijos_Web" target="_blank" rel="noopener noreferrer">
                     Ver repositorio en GitHub
@@ -399,7 +399,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- JavaScript propio del proyecto (Sprint 2) -->
+    <!-- JavaScript propio del proyecto -->
     <script src="../js/main.js"></script>
     <script src="../js/portafolio.js"></script>
 

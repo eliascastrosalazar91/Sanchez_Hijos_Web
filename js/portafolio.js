@@ -6,19 +6,9 @@
  * Funcionalidades dinámicas del portafolio de proyectos.
  * Se carga únicamente en pages/portafolio.html.
  *
- * Sprint 2 — Tarea 14: implementación de "Leer más / Leer menos".
- *   - Tareas 15 (agregar proyecto) y 16 (ver/ocultar ficha técnica) se
- *     incorporarán en hilos posteriores sobre este mismo archivo.
- *
- * Patrón: event delegation sobre el contenedor #lista-proyectos.
- *   - Esto permite que las tarjetas creadas dinámicamente en Tarea 15
- *     hereden la funcionalidad sin necesidad de re-enganchar listeners.
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Marca de vida (se eliminará en Tarea 17 — revisión integral)
-  console.log('[Sánchez e Hijos] portafolio.js cargado correctamente.');
-
   // Contenedor del listado de tarjetas. Si no existe, no hay nada que
   // engancha (defensa para que el script no rompa si se carga por error
   // en otra página).
@@ -64,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // sobre #filtros-categoria; en cada clic recorremos los wrappers
 // con [data-categoria] y alternamos el atributo "hidden". Como
 // el recorrido se hace sobre el DOM en cada clic, las tarjetas
-// dinámicas (Tarea 15) se filtran automáticamente sin necesidad
+// dinámicas se filtran automáticamente sin necesidad
 // de re-enganchar listeners.
 // ============================================================
 

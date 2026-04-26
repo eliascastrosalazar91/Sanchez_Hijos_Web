@@ -10,8 +10,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('[Sánchez e Hijos] validaciones.js cargado correctamente.');
-
   // Si no estamos en contacto.html, salimos sin hacer nada.
   var form = document.querySelector('form');
   if (!form) return;
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var campoMensaje = document.getElementById('mensaje');
 
   // ---------- Helpers de UI ----------
-
   // Marca el campo como inválido y escribe el mensaje en su contenedor de error.
   function mostrarError(campo, idError, mensaje) {
     campo.classList.add('input-error');
@@ -44,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ---------- Funciones de validación (una por campo) ----------
-
   // Nombre: obligatorio + mínimo 3 caracteres.
   function validarNombre() {
     var valor = campoNombre.value.trim();
@@ -124,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ---------- Asignación de eventos ----------
-
   // blur: validar al perder el foco
   campoNombre.addEventListener('blur', validarNombre);
   campoEmail.addEventListener('blur', validarEmail);
