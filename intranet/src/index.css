@@ -1,0 +1,84 @@
+/* index.css
+ * Estilos globales de la intranet. Incluye:
+ *  - Reset minimo (box-sizing y margenes).
+ *  - Variables CSS con la paleta de marca y las tipografias reutilizadas
+ *    del sitio publico (Sprint 1 + 2).
+ *  - Estilos base para body y headings.
+ *  - Placeholder mientras se construye la intranet (se removera mas adelante).
+ */
+
+:root {
+  /* Paleta de marca (reutilizada del sitio publico) */
+  --color-primario: #1B2A4A;
+  --color-secundario: #4A5568;
+  --color-acento: #E67E22;
+  --color-fondo-claro: #F4F6F8;
+  --color-fondo-oscuro: #0F1B33;
+  --color-texto: #2D3748;
+  --color-texto-claro: #FFFFFF;
+  --color-error: #C0392B;
+
+  /* Tipografias */
+  --font-heading: 'Roboto Slab', Georgia, serif;
+  --font-body: 'Open Sans', Arial, sans-serif;
+}
+
+/* Reset minimo */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-texto);
+  background-color: var(--color-fondo-claro);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primario);
+  margin: 0 0 0.75rem;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+/* Placeholder de App.jsx mientras se construye la intranet */
+.app-placeholder {
+  max-width: 720px;
+  margin: 4rem auto;
+  padding: 2rem 2.5rem;
+  background: var(--color-texto-claro);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.app-placeholder h1 {
+  margin-bottom: 1.25rem;
+}
+
+.placeholder-nota {
+  color: var(--color-secundario);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
