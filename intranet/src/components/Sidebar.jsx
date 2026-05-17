@@ -13,22 +13,32 @@
 
 import React from 'react';
 import logoSidebar from '../assets/logo_centrado_oscuro.png';
+import {
+  IconDashboard,
+  IconPersonal,
+  IconAreas,
+  IconProyectos,
+  IconInformes,
+  IconMisProyectos,
+  IconMiPerfil,
+  IconCerrarSesion,
+} from './Icons.jsx';
 import '../styles/sidebar.css';
 
 // Enlaces de navegacion expuestos por rol. El orden de aparicion en la lista
 // corresponde al orden visual en el sidebar.
 const ENLACES_POR_ROL = {
   admin: [
-    { id: 'admin-dashboard', label: 'Dashboard' },
-    { id: 'admin-personal', label: 'Personal' },
-    { id: 'admin-areas', label: 'Áreas Técnicas' },
-    { id: 'admin-proyectos', label: 'Proyectos' },
-    { id: 'admin-informes', label: 'Informes' },
+    { id: 'admin-dashboard', label: 'Dashboard', Icon: IconDashboard },
+    { id: 'admin-personal', label: 'Personal', Icon: IconPersonal },
+    { id: 'admin-areas', label: 'Áreas Técnicas', Icon: IconAreas },
+    { id: 'admin-proyectos', label: 'Proyectos', Icon: IconProyectos },
+    { id: 'admin-informes', label: 'Informes', Icon: IconInformes },
   ],
   personal: [
-    { id: 'personal-dashboard', label: 'Dashboard' },
-    { id: 'personal-mis-proyectos', label: 'Mis Proyectos' },
-    { id: 'personal-mi-perfil', label: 'Mi Perfil' },
+    { id: 'personal-dashboard', label: 'Dashboard', Icon: IconDashboard },
+    { id: 'personal-mis-proyectos', label: 'Mis Proyectos', Icon: IconMisProyectos },
+    { id: 'personal-mi-perfil', label: 'Mi Perfil', Icon: IconMiPerfil },
   ],
 };
 
@@ -62,7 +72,8 @@ function Sidebar({ rol, activeScreen, onNavigate, onLogout }) {
               onClick={() => onNavigate(enlace.id)}
               aria-current={esActivo ? 'page' : undefined}
             >
-              {enlace.label}
+              <enlace.Icon className="sidebar-icon" />
+              <span>{enlace.label}</span>
             </button>
           );
         })}
@@ -75,7 +86,8 @@ function Sidebar({ rol, activeScreen, onNavigate, onLogout }) {
           className="sidebar-logout"
           onClick={onLogout}
         >
-          Cerrar sesión
+          <IconCerrarSesion className="sidebar-icon" />
+          <span>Cerrar sesión</span>
         </button>
       </div>
     </aside>

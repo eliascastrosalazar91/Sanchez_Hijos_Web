@@ -43,7 +43,9 @@
 }
 
 .sidebar-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
   width: 100%;
   text-align: left;
   padding: 0.65rem 0.85rem;
@@ -79,7 +81,10 @@
 }
 
 .sidebar-logout {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
   width: 100%;
   padding: 0.6rem 0.85rem;
   font-size: 0.9rem;
@@ -99,4 +104,13 @@
   border-color: var(--color-error);
   color: #ffffff;
   outline: none;
+}
+
+/* Icono dentro de los botones del sidebar (links y logout). flex-shrink:0
+ * evita que el icono se comprima cuando el label es largo. width/height
+ * fijan el tamano para que sea independiente del default del componente. */
+.sidebar-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
 }
