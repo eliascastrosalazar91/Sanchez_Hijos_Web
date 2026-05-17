@@ -1,0 +1,140 @@
+/* login.css
+ * Estilos de la pantalla LoginScreen. Consume las variables CSS de
+ * paleta y tipografias declaradas en index.css. Sin Tailwind ni Bootstrap:
+ * la intranet usa CSS tradicional con clases con prefijo .login-*.
+ */
+
+/* Wrapper full-screen centrado horizontal y verticalmente. */
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-fondo-oscuro) 0%,
+    var(--color-primario) 100%
+  );
+}
+
+/* Tarjeta blanca contenedora del formulario. */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-texto-claro);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(15, 27, 51, 0.35);
+  padding: 2.25rem 2rem;
+}
+
+/* Encabezado con el logo de la empresa. */
+.login-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Logo de la intranet (incluye marca y bajada). */
+.login-logo-img {
+  display: block;
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Formulario. */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.login-campo label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.login-campo input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid #CBD5E0;
+  border-radius: 6px;
+  background: var(--color-fondo-claro);
+  color: var(--color-texto);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-campo input:focus {
+  outline: none;
+  border-color: var(--color-acento);
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+  background: var(--color-texto-claro);
+}
+
+/* Mensaje de error inline. */
+.login-error {
+  margin: 0;
+  padding: 0.6rem 0.85rem;
+  background: rgba(192, 57, 43, 0.1);
+  color: var(--color-error);
+  border-left: 3px solid var(--color-error);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Boton principal. */
+.login-boton {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-primario);
+  color: var(--color-texto-claro);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.login-boton:hover {
+  background: var(--color-fondo-oscuro);
+}
+
+.login-boton:active {
+  transform: translateY(1px);
+}
+
+.login-boton:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+/* Bloque informativo con credenciales mock. */
+.login-credenciales {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #E2E8F0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-secundario);
+}
+
+.login-credenciales-titulo {
+  font-weight: 600;
+  color: var(--color-texto);
+  margin: 0 0 0.5rem;
+}
+
+.login-credenciales p {
+  margin: 0.15rem 0;
+}
