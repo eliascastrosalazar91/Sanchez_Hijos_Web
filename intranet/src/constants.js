@@ -1,6 +1,6 @@
 // constants.js
 // Fuente unica de datos mock para la intranet de Sanchez e Hijos.
-// Centraliza credenciales, areas tecnicas, operarios y proyectos
+// Centraliza credenciales, areas tecnicas, personal y proyectos
 // ferroviarios para que todas las pantallas del Sprint 3 consuman el
 // mismo set. La sesion vive solo en memoria; no hay persistencia.
 
@@ -10,7 +10,7 @@
  */
 export const CREDENCIALES_MOCK = [
   { usuario: 'admin',    clave: 'admin',    rol: 'admin'    },
-  { usuario: 'operario', clave: 'operario', rol: 'operario' },
+  { usuario: 'personal', clave: 'personal', rol: 'personal' },
 ];
 
 /**
@@ -21,7 +21,7 @@ export const ESTADOS_PROYECTO = ['Planificado', 'En curso', 'Pausado', 'Finaliza
 
 /**
  * Areas tecnicas de la empresa (5).
- * `responsableId` apunta a un operario de OPERARIOS.
+ * `responsableId` apunta a un miembro del personal de PERSONAL.
  */
 export const AREAS_TECNICAS = [
   { id: 'AREA-OC', nombre: 'Obras Civiles',        responsableId: 'SH-002' },
@@ -32,12 +32,12 @@ export const AREAS_TECNICAS = [
 ];
 
 /**
- * Operarios de Sanchez e Hijos (8 registros).
+ * Personal de Sanchez e Hijos (8 registros).
  * SH-001 representa al rol admin del login mock (Administrador de Contrato);
- * el resto representa al rol operario. `areaId` es null para SH-001 porque
+ * el resto representa al rol personal. `areaId` es null para SH-001 porque
  * la administracion de contrato no se asigna a una unica area tecnica.
  */
-export const OPERARIOS = [
+export const PERSONAL = [
   { id: 'SH-001', nombre: 'Carlos Pérez Soto',      areaId: null,      cargo: 'Administrador de Contrato',        fechaIngreso: '2018-03-15' },
   { id: 'SH-002', nombre: 'María Fernández Rojas',  areaId: 'AREA-OC', cargo: 'Ingeniera de Proyecto',            fechaIngreso: '2019-07-01' },
   { id: 'SH-003', nombre: 'Jorge Muñoz Lagos',      areaId: 'AREA-OC', cargo: 'Constructor Civil',                fechaIngreso: '2020-01-20' },
@@ -50,15 +50,15 @@ export const OPERARIOS = [
 
 /**
  * Proyectos ferroviarios (8 registros).
- * `areaId` apunta a AREAS_TECNICAS; `operariosAsignados` lista ids de OPERARIOS.
+ * `areaId` apunta a AREAS_TECNICAS; `personalAsignado` lista ids de PERSONAL.
  */
 export const PROYECTOS = [
-  { id: 'PRY-001', nombre: 'Reposición de durmientes Estación Alameda',  areaId: 'AREA-OC', estado: 'En curso',    operariosAsignados: ['SH-002', 'SH-003'] },
-  { id: 'PRY-002', nombre: 'Reparación enclavamiento Tramo Norte',       areaId: 'AREA-CA', estado: 'En curso',    operariosAsignados: ['SH-004', 'SH-005'] },
-  { id: 'PRY-003', nombre: 'Mantención Máquina de Cambio Km 42',         areaId: 'AREA-MC', estado: 'Finalizado',  operariosAsignados: ['SH-006'] },
-  { id: 'PRY-004', nombre: 'Instalación barrera automática San Bernardo', areaId: 'AREA-BA', estado: 'Planificado', operariosAsignados: ['SH-007'] },
-  { id: 'PRY-005', nombre: 'Despliegue sensores telemetría Línea 5',     areaId: 'AREA-TM', estado: 'En curso',    operariosAsignados: ['SH-008'] },
-  { id: 'PRY-006', nombre: 'Refuerzo terraplén sector Buin',             areaId: 'AREA-OC', estado: 'Pausado',     operariosAsignados: ['SH-003'] },
-  { id: 'PRY-007', nombre: 'Actualización software de control Tramo Sur', areaId: 'AREA-CA', estado: 'Planificado', operariosAsignados: ['SH-005'] },
-  { id: 'PRY-008', nombre: 'Calibración telemetría Patio Maestranza',    areaId: 'AREA-TM', estado: 'Finalizado',  operariosAsignados: ['SH-008'] },
+  { id: 'PRY-001', nombre: 'Reposición de durmientes Estación Alameda',  areaId: 'AREA-OC', estado: 'En curso',    personalAsignado: ['SH-002', 'SH-003'] },
+  { id: 'PRY-002', nombre: 'Reparación enclavamiento Tramo Norte',       areaId: 'AREA-CA', estado: 'En curso',    personalAsignado: ['SH-004', 'SH-005'] },
+  { id: 'PRY-003', nombre: 'Mantención Máquina de Cambio Km 42',         areaId: 'AREA-MC', estado: 'Finalizado',  personalAsignado: ['SH-006'] },
+  { id: 'PRY-004', nombre: 'Instalación barrera automática San Bernardo', areaId: 'AREA-BA', estado: 'Planificado', personalAsignado: ['SH-007'] },
+  { id: 'PRY-005', nombre: 'Despliegue sensores telemetría Línea 5',     areaId: 'AREA-TM', estado: 'En curso',    personalAsignado: ['SH-008'] },
+  { id: 'PRY-006', nombre: 'Refuerzo terraplén sector Buin',             areaId: 'AREA-OC', estado: 'Pausado',     personalAsignado: ['SH-003'] },
+  { id: 'PRY-007', nombre: 'Actualización software de control Tramo Sur', areaId: 'AREA-CA', estado: 'Planificado', personalAsignado: ['SH-005'] },
+  { id: 'PRY-008', nombre: 'Calibración telemetría Patio Maestranza',    areaId: 'AREA-TM', estado: 'Finalizado',  personalAsignado: ['SH-008'] },
 ];

@@ -1,0 +1,102 @@
+/* ============================================================
+ * Sidebar de la intranet
+ * ------------------------------------------------------------
+ * Aside vertical fijo a la izquierda del MainLayout. Contiene
+ * logo de marca, enlaces de navegación por rol y botón de
+ * cierre de sesión. Consume las variables de paleta definidas
+ * en src/index.css.
+ * ============================================================ */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  min-height: 100vh;
+  background-color: var(--color-fondo-oscuro);
+  color: var(--color-texto-claro);
+  font-family: var(--font-body);
+}
+
+/* Header con logo de marca */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-logo {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Listado de enlaces */
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 0.75rem;
+}
+
+.sidebar-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-texto-claro);
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-link:hover,
+.sidebar-link:focus-visible {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  outline: none;
+}
+
+.sidebar-link--activo,
+.sidebar-link--activo:hover,
+.sidebar-link--activo:focus-visible {
+  background-color: var(--color-acento);
+  color: #ffffff;
+}
+
+/* Pie del sidebar con cerrar sesión */
+.sidebar-footer {
+  padding: 1rem 0.75rem 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-logout {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-texto-claro);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.sidebar-logout:hover,
+.sidebar-logout:focus-visible {
+  background-color: var(--color-error);
+  border-color: var(--color-error);
+  color: #ffffff;
+  outline: none;
+}

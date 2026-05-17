@@ -1,0 +1,54 @@
+/* ============================================================
+ * Layout principal de la intranet
+ * ------------------------------------------------------------
+ * Distribuye el sidebar a la izquierda y el área de contenido
+ * a la derecha. El área de contenido ocupa el espacio restante
+ * y permite scroll vertical independiente.
+ * ============================================================ */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-fondo-claro);
+}
+
+.layout-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.layout-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.85rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  color: var(--color-secundario);
+}
+
+.layout-content-sesion strong {
+  color: var(--color-primario);
+  font-weight: 600;
+}
+
+.layout-content-body {
+  flex: 1;
+  padding: 2rem;
+}
+
+.layout-content-titulo {
+  font-family: var(--font-heading);
+  color: var(--color-primario);
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.layout-content-mensaje {
+  margin: 0;
+  color: var(--color-secundario);
+  font-size: 0.95rem;
+}

@@ -101,7 +101,7 @@ function LoginScreen({ onLogin }) {
             Administrador: <strong>admin</strong> / <strong>admin</strong>
           </p>
           <p>
-            Operario: <strong>operario</strong> / <strong>operario</strong>
+            Operador técnico: <strong>personal</strong> / <strong>personal</strong>
           </p>
         </footer>
       </div>
