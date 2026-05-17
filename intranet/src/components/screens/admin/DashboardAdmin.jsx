@@ -9,14 +9,6 @@
  *   3. Horas Registradas Últimos 30 días (line) - registros sumados por fecha.
  *   4. Salarios por Cargo (bar horizontal) - personal agrupado por cargo,
  *      promedio de salario. Top 5 cargos en orden de aparicion.
- *
- * Tarea 24.bis: antes leia las colecciones directo desde constants.js a
- * nivel de modulo, calculaba las series una sola vez al cargar la app y
- * nunca se refrescaba. Ahora carga las 4 colecciones al montar la pantalla
- * (igual que el resto de pantallas admin); MainLayout desmonta los
- * componentes al navegar, asi que cada entrada al Dashboard refresca los
- * datos contra el ultimo estado persistido por las pantallas CRUD.
- *
  * Las constantes de opciones de Chart.js y la paleta de colores no
  * dependen de datos, asi que se mantienen a nivel de modulo para
  * conservar la misma referencia entre renders. Chart.jsx destruye y

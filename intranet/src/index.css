@@ -4,7 +4,6 @@
  *  - Variables CSS con la paleta de marca y las tipografias reutilizadas
  *    del sitio publico (Sprint 1 + 2).
  *  - Estilos base para body y headings.
- *  - Placeholder mientras se construye la intranet (se removera mas adelante).
  */
 
 :root {
@@ -83,8 +82,7 @@ p {
   margin-bottom: 0;
 }
 
-/* Boton transitorio del placeholder de App.jsx (Tarea 21).
- * Se removera junto con el placeholder cuando MainLayout entre en escena. */
+/* Boton transitorio del placeholder de App.jsx.*/
 .placeholder-boton {
   margin-top: 1rem;
   padding: 0.6rem 1.25rem;

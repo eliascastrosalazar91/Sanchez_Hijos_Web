@@ -5,10 +5,6 @@
  * y Proyectos. Garantiza que los codigos NUNCA se reciclen, incluso
  * cuando se elimina un registro o se recarga la pagina.
  *
- * Estrategia: el contador de cada entidad se persiste en localStorage.
- * Esto sobrevive a recargas del navegador y a eliminaciones de
- * registros. Inicializa con el max numerico actual de constants.js.
- *
  * Para areas se usa un Set de codigos historicamente usados (no un
  * contador) porque el patron AREA-XX es nominal (2 letras del nombre).
  * Si el codigo base ya fue usado, se agrega sufijo numerico.
@@ -119,9 +115,7 @@ export function siguienteIdArea(nombre) {
 
 /**
  * Utilidad de debug. Resetea los contadores a su valor inicial calculado
- * desde constants.js. Util si durante desarrollo necesitas "limpiar" los
- * contadores acumulados en localStorage.
- *
+ * desde constants.js. 
  * Uso desde consola del navegador:
  *   import('./src/utils/idGenerator.js').then(m => m.resetCounters())
  */

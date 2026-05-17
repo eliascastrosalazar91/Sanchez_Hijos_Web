@@ -10,14 +10,7 @@ export default defineConfig({
   plugins: [
     react(),
     // viteSingleFile: empaqueta todo el JS y el CSS DENTRO del propio
-    // dist/index.html como bloques inline. Resultado: un unico HTML
-    // autocontenido que funciona al abrirse por doble click desde el
-    // sistema de archivos (file://), sin necesidad de un servidor HTTP
-    // local. Esto es obligatorio porque los <script type="module"> de
-    // Vite estandar son bloqueados por CORS bajo file:// (origin null).
-    // Los assets binarios pequenos (<4KB) tambien se inlinean como
-    // base64; los grandes (PNGs) quedan en dist/assets/ y se referencian
-    // por ruta relativa, lo cual SI funciona desde file://.
+    // dist/index.html como bloques inline//.
     viteSingleFile(),
   ],
 })

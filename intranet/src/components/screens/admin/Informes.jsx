@@ -5,10 +5,6 @@
  * la empresa. Clona la maqueta Informes.tsx y la reemplaza con datos
  * reales tomados desde localStorage via utils/storage.js.
  *
- * Tarea 24.bis: antes leia directo desde constants.js, lo que dejaba los
- * informes desincronizados frente al CRUD admin. Ahora lee las colecciones
- * persistidas al montar la pantalla; como MainLayout desmonta al navegar,
- * cada entrada a Informes refresca los datos.
  *
  * Tipos de informe soportados:
  *   1. Personal por area

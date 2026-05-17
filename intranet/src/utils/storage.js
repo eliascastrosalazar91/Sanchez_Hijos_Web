@@ -2,11 +2,6 @@
  * storage.js
  *
  * Capa de persistencia local para las colecciones mutables de la intranet.
- * Tarea 24.bis: estado actual (Tarea 24) tiene contadores de IDs persistidos
- * en localStorage via utils/idGenerator.js, pero los registros mismos vivian
- * solo en el estado de cada pantalla y se perdian al refrescar. Este modulo
- * cierra esa brecha.
- *
  * Modelo:
  *   - Primer arranque (clave ausente en localStorage): se siembra desde
  *     constants.js, se guarda en localStorage y se devuelve la semilla.

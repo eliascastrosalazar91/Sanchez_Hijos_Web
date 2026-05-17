@@ -4,13 +4,6 @@
 // ferroviarios y registros de horas para que todas las pantallas del
 // Sprint 3 consuman el mismo set. La sesion vive solo en memoria; no hay
 // persistencia.
-//
-// Tarea 24: se ampliaron los campos de PERSONAL (email, direccion,
-// telefono, salario) y PROYECTOS (descripcion, fechaInicio) para clonar
-// la maqueta de Google AI Studio sin recortes, y se agrego el dataset
-// REGISTROS_HORAS (30 dias x 8 personas) para alimentar el chart de
-// horas registradas del DashboardAdmin y el informe "Horas por Empleado".
-
 /**
  * Credenciales mock para el LoginScreen.
  * Mapean usuario -> rol. Sin hash, sin backend; solo para demo.
@@ -25,11 +18,6 @@ export const CREDENCIALES_MOCK = [
  * Se centraliza aqui para que las pantallas del rol personal
  * (DashboardPersonal, MisProyectos, MiPerfil) resuelvan al usuario actual
  * sin necesidad de propagarlo via props desde App.jsx / LoginScreen.
- *
- * Tarea 25: se elige SH-008 (Rodrigo Vega Espinoza, Jefe Telemetría)
- * porque tiene 2 proyectos asignados (PRY-005 en curso y PRY-008
- * finalizado), lo que produce un pie chart visualmente significativo
- * en el DashboardPersonal.
  */
 export const USUARIO_PERSONAL_MOCK_ID = 'SH-008';
 
@@ -110,10 +98,6 @@ export const PROYECTOS = [
  * para los ultimos 30 dias. Generado de forma deterministica al cargar el
  * modulo para que las pantallas y los charts muestren siempre los mismos
  * valores sin depender de Math.random ni de la fecha actual del sistema.
- *
- * Tarea 25: se extendio el esquema para incluir proyectoId y descripcion,
- * de modo que el DashboardPersonal pueda agrupar "Mis horas por proyecto"
- * y el modal "Registrar horas" persista contra el mismo esquema.
  *
  * Estructura: array de objetos
  *   { fecha, personalId, proyectoId, horas, descripcion }.

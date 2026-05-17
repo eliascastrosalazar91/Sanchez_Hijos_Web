@@ -1,8 +1,5 @@
 // App.jsx
 // Componente raiz de la intranet de Sanchez e Hijos.
-// Tarea 22: introduce el estado activeScreen y delega el render al
-// MainLayout cuando hay sesion activa. Sin sesion sigue mostrando
-// el LoginScreen (sin cambios respecto a Tarea 21).
 
 import { useState } from 'react';
 import LoginScreen from './components/LoginScreen.jsx';

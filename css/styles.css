@@ -269,9 +269,6 @@ form select.input-error {
   color: #2D3748;
 }
 
-
-/* ===== Tarea 15: Badge de categoría en tarjetas de proyecto ===== */
-
 /* Badge visible con la categoría del proyecto, bajo el título de cada tarjeta */
 .badge-categoria {
   display: inline-block;
@@ -288,8 +285,6 @@ form select.input-error {
   border-radius: 0.25rem;
 }
 
-/* ===== Tarea 15: Formulario "Agregar nuevo proyecto" ===== */
-
 /* Caja del formulario con borde sutil para separarlo del fondo blanco */
 .form-nuevo-proyecto {
   background-color: #FFFFFF;
@@ -304,8 +299,6 @@ form select.input-error {
   font-weight: 600;
   padding: 0.5rem 1.5rem;
 }
-
-/* ===== Tarea 16: Filtro de proyectos por categoría ===== */
 
 /* Barra contenedora de los botones de filtro */
 .filtros-categoria {
@@ -348,7 +341,6 @@ form select.input-error {
   color: #FFFFFF;
 }
 
-/* ===== Tarea 26: Logo del header en navbar ===== */
 
 /* Imagen del logo dentro de .navbar-brand. Altura controlada para que encaje
    en la altura nativa del navbar de Bootstrap 4. width:auto preserva la
@@ -358,8 +350,6 @@ form select.input-error {
   width: auto;
   display: block;
 }
-
-/* ===== Tarea 26: Botón "Acceso intranet" en navbar ===== */
 
 /* CTA al extremo derecho del navbar, separado visualmente del menú principal.
    Estilo outline blanco para diferenciarlo de los .nav-link y del .btn-accent
@@ -382,8 +372,6 @@ form select.input-error {
   border-color: #E67E22;
   text-decoration: none;
 }
-
-/* ===== Tarea 26: Separador inline en el footer ===== */
 
 /* Separador discreto entre los enlaces del footer (Acceso intranet · GitHub).
    aria-hidden en el HTML evita que un lector de pantalla lo lea como contenido. */

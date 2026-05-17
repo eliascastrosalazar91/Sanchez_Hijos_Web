@@ -209,7 +209,7 @@ export function IconClose({ size = 20, className = '' }) {
 }
 
 // Agregar (+ dentro de circulo). Para botones "Agregar" en GestionPersonal,
-// GestionAreas, GestionProyectos de la Tarea 24.
+// GestionAreas, GestionProyectos.
 export function IconPlus({ size = 20, className = '' }) {
   return (
     <Svg size={size} className={className}>
@@ -230,9 +230,7 @@ export function IconBuscar({ size = 20, className = '' }) {
   );
 }
 
-// Filtro: embudo invertido con tallo. Para botones "Filtros avanzados" en
-// las pantallas de gestion (Tarea 24) y futuros filtros en pantallas
-// personal (Tarea 25).
+// Filtro: embudo invertido con tallo. 
 export function IconFiltro({ size = 20, className = '' }) {
   return (
     <Svg size={size} className={className}>

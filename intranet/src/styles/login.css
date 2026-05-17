@@ -8,7 +8,7 @@
 .login-screen {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;        /* Tarea 26: card + footer apilados verticalmente */
+  flex-direction: column;  
   align-items: center;
   /* `justify-content: center` removido: el centrado vertical de la card
      se obtiene con `margin: auto 0` (ver .login-card), y eso permite
@@ -29,7 +29,7 @@
   border-radius: 10px;
   box-shadow: 0 12px 32px rgba(15, 27, 51, 0.35);
   padding: 2.25rem 2rem;
-  margin-top: auto;              /* Tarea 26: junto con el margin-top: auto del footer, centra la card verticalmente */
+  margin-top: auto;       
 }
 
 /* Encabezado con el logo de la empresa. */
@@ -143,8 +143,7 @@
   margin: 0.15rem 0;
 }
 
-/* ===== Tarea 26: Footer del sitio en la pantalla de login =====
- * Réplica visual del footer del sitio público, adaptada al fondo oscuro
+/* Réplica visual del footer del sitio público, adaptada al fondo oscuro
  * del LoginScreen. Coexiste con .login-credenciales (que vive dentro de
  * la card con las credenciales mock); este footer va fuera de la card
  * y al pie de la pantalla. */

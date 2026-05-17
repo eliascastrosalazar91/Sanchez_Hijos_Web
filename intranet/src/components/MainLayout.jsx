@@ -30,8 +30,7 @@ import MiPerfil from './screens/personal/MiPerfil.jsx';
 import '../styles/layout.css';
 
 // Mapa identificador -> componente. Centralizar el dispatcher evita un
-// switch largo dentro del JSX y permite agregar pantallas (rol personal
-// en Tarea 25) cambiando solo este objeto.
+// switch largo dentro del JSX y permite agregar pantallas cambiando solo este objeto.
 const SCREEN_COMPONENTS = {
   'admin-dashboard':       DashboardAdmin,
   'admin-personal':        GestionPersonal,
@@ -45,8 +44,7 @@ const SCREEN_COMPONENTS = {
 
 function MainLayout({ rol, usuario, activeScreen, onNavigate, onLogout }) {
   // Resuelve el componente de pantalla a renderizar. Si activeScreen aun
-  // no esta mapeado (caso tipico: pantallas personal-* hasta Tarea 25),
-  // se muestra el placeholder "En construccion".
+  // no esta mapeado se muestra el placeholder "En construccion".
   const Pantalla = SCREEN_COMPONENTS[activeScreen];
 
   return (
@@ -78,9 +76,7 @@ function MainLayout({ rol, usuario, activeScreen, onNavigate, onLogout }) {
 }
 
 /**
- * Placeholder transitorio para pantallas aun no implementadas. En la Tarea 24
- * cubre las pantallas personal-*; en Tarea 25 se retira cuando el dispatcher
- * mapee los 8 ids de pantalla.
+ * Placeholder transitorio para pantallas aun no implementadas.
  */
 function PlaceholderEnConstruccion({ screenId }) {
   return (
