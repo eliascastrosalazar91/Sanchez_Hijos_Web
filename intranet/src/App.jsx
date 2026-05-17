@@ -45,7 +45,6 @@ function App() {
   if (!sesion) {
     return <LoginScreen onLogin={handleLogin} />;
   }
-
   return (
     <MainLayout
       rol={sesion.rol}
