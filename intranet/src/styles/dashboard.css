@@ -1,0 +1,41 @@
+/* dashboard.css
+ * Estilos especificos del DashboardAdmin.
+ * Grid 2x2 de tarjetas con un Chart cada una. Cada tarjeta tiene altura
+ * fija para que el wrapper de Chart.jsx (que renderiza un <canvas>)
+ * pueda responsive a su contenedor (options.maintainAspectRatio: false).
+ */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.dashboard-card {
+  background: var(--color-texto-claro);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.dashboard-card-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-primario);
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+/* Contenedor con altura definida; el <canvas> de Chart.jsx se ajusta
+ * a este alto via options.responsive + maintainAspectRatio:false. */
+.dashboard-chart-canvas {
+  position: relative;
+  height: 260px;
+}

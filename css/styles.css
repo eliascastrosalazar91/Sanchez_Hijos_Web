@@ -347,3 +347,48 @@ form select.input-error {
   border-color: #0F1B33;
   color: #FFFFFF;
 }
+
+/* ===== Tarea 26: Logo del header en navbar ===== */
+
+/* Imagen del logo dentro de .navbar-brand. Altura controlada para que encaje
+   en la altura nativa del navbar de Bootstrap 4. width:auto preserva la
+   proporción del archivo (1644×346 px ≈ 4.75:1). */
+.navbar-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+/* ===== Tarea 26: Botón "Acceso intranet" en navbar ===== */
+
+/* CTA al extremo derecho del navbar, separado visualmente del menú principal.
+   Estilo outline blanco para diferenciarlo de los .nav-link y del .btn-accent
+   (este último queda reservado para CTAs de contenido: Servicios, Contacto). */
+.btn-acceso-intranet {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.35rem 0.85rem;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-acceso-intranet:hover,
+.btn-acceso-intranet:focus {
+  background-color: #E67E22; /* Naranja señalización (paleta de marca) */
+  color: #FFFFFF;
+  border-color: #E67E22;
+  text-decoration: none;
+}
+
+/* ===== Tarea 26: Separador inline en el footer ===== */
+
+/* Separador discreto entre los enlaces del footer (Acceso intranet · GitHub).
+   aria-hidden en el HTML evita que un lector de pantalla lo lea como contenido. */
+.site-footer .footer-sep {
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.4);
+}

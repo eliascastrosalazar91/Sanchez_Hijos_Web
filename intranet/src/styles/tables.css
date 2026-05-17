@@ -1,0 +1,307 @@
+/* tables.css
+ * Estilos compartidos por las pantallas CRUD del rol admin:
+ *   GestionPersonal, GestionAreas, GestionProyectos, Informes.
+ *
+ * Cubre:
+ *   - Header de pantalla (titulo + acciones: buscador y boton crear).
+ *   - Tabla de listado (thead, filas, hover, acciones).
+ *   - Formularios dentro de modales (grid de 1 o 2 columnas, labels,
+ *     inputs, selects, textarea, checkboxes).
+ *   - Modal de confirmacion de eliminacion (input de nombre tipeado).
+ *
+ * No depende de Bootstrap. Usa exclusivamente las variables CSS de
+ * index.css (paleta y tipografias).
+ */
+
+/* ============================================================
+ * Encabezado de pantalla
+ * Patron: <h1> a la izquierda, acciones a la derecha.
+ * ============================================================ */
+
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.screen-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--color-primario);
+  margin: 0;
+}
+
+.screen-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+ * Input de busqueda con icono lupa
+ * Se usa en las 4 pantallas CRUD. El <IconBuscar> se posiciona
+ * absoluto dentro del wrapper.
+ * ============================================================ */
+
+.search-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.search-input {
+  width: 16rem;
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  background: var(--color-texto-claro);
+  border: 1px solid #CBD5E0;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-input:focus {
+  border-color: var(--color-acento);
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.6rem;
+  transform: translateY(-50%);
+  color: var(--color-secundario);
+  pointer-events: none;
+}
+
+/* ============================================================
+ * Botones de la pantalla (crear, exportar, etc.)
+ * Variantes: primario (naranja), secundario (gris), destructivo (rojo).
+ * ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-texto-claro);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(0.92);
+}
+
+.btn:disabled {
+  background: #A0AEC0;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.btn-primario     { background: var(--color-acento); }
+.btn-secundario   { background: var(--color-secundario); }
+.btn-destructivo  { background: var(--color-error); }
+.btn-azul         { background: #2563EB; } /* Para "Generar Informe" en pantalla Informes */
+
+/* ============================================================
+ * Tarjeta contenedora de la tabla (fondo blanco + sombra)
+ * ============================================================ */
+
+.table-card {
+  background: var(--color-texto-claro);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Scroll horizontal en viewports angostos */
+.table-scroll {
+  overflow-x: auto;
+}
+
+/* ============================================================
+ * Tabla
+ * ============================================================ */
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  color: var(--color-texto);
+}
+
+.data-table thead {
+  background: var(--color-fondo-claro);
+}
+
+.data-table th {
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-secundario);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #EDF2F7;
+  vertical-align: middle;
+}
+
+.data-table tbody tr:hover {
+  background: rgba(27, 42, 74, 0.04);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table .col-id {
+  font-weight: 600;
+  color: var(--color-primario);
+  white-space: nowrap;
+}
+
+.data-table .col-acciones {
+  white-space: nowrap;
+}
+
+/* Botones de accion dentro de la tabla (Editar/Eliminar) */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.3rem 0.6rem;
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.action-btn:hover {
+  background: var(--color-fondo-claro);
+}
+
+.action-btn-editar   { color: #2563EB; }
+.action-btn-eliminar { color: var(--color-error); }
+
+/* Mensaje cuando una tabla queda vacia tras filtrar */
+.table-empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--color-secundario);
+  font-style: italic;
+}
+
+/* ============================================================
+ * Formularios dentro de modales
+ * Grid configurable (1 o 2 columnas segun ancho), labels arriba.
+ * ============================================================ */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .form-grid-2col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-secundario);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  background: var(--color-texto-claro);
+  border: 1px solid #CBD5E0;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-acento);
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+/* Grupo de checkboxes (asignar personal a proyecto) */
+.checkbox-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 1rem;
+  max-height: 11rem;
+  overflow-y: auto;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  background: var(--color-fondo-claro);
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* ============================================================
+ * Modal de confirmacion de eliminacion
+ * Texto + input para tipear el nombre del item.
+ * ============================================================ */
+
+.confirm-text {
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  margin-bottom: 0.75rem;
+}
+
+.confirm-text strong {
+  color: var(--color-error);
+}

@@ -8,8 +8,11 @@
 .login-screen {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;        /* Tarea 26: card + footer apilados verticalmente */
   align-items: center;
-  justify-content: center;
+  /* `justify-content: center` removido: el centrado vertical de la card
+     se obtiene con `margin: auto 0` (ver .login-card), y eso permite
+     empujar .login-site-footer al pie con su propio margin-top: auto. */
   padding: 2rem 1rem;
   background: linear-gradient(
     135deg,
@@ -26,6 +29,7 @@
   border-radius: 10px;
   box-shadow: 0 12px 32px rgba(15, 27, 51, 0.35);
   padding: 2.25rem 2rem;
+  margin-top: auto;              /* Tarea 26: junto con el margin-top: auto del footer, centra la card verticalmente */
 }
 
 /* Encabezado con el logo de la empresa. */
@@ -137,4 +141,43 @@
 
 .login-credenciales p {
   margin: 0.15rem 0;
+}
+
+/* ===== Tarea 26: Footer del sitio en la pantalla de login =====
+ * Réplica visual del footer del sitio público, adaptada al fondo oscuro
+ * del LoginScreen. Coexiste con .login-credenciales (que vive dentro de
+ * la card con las credenciales mock); este footer va fuera de la card
+ * y al pie de la pantalla. */
+
+.login-site-footer {
+  width: 100%;
+  max-width: 420px;              /* Mismo ancho que la card para alineación visual */
+  margin-top: auto;              /* Empuja el footer al fondo del flex-column */
+  padding-top: 1.75rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-site-footer p {
+  margin: 0.35rem 0;
+}
+
+.login-site-footer a {
+  color: var(--color-acento);    /* Naranja señalización — alineado con el sitio público */
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.login-site-footer a:hover,
+.login-site-footer a:focus {
+  color: var(--color-texto-claro);
+  text-decoration: underline;
+}
+
+/* Separador inline entre los enlaces (Acceso sitio principal · GitHub) */
+.login-site-footer .footer-sep {
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.4);
 }

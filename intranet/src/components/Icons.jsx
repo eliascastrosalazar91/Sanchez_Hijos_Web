@@ -229,3 +229,14 @@ export function IconBuscar({ size = 20, className = '' }) {
     </Svg>
   );
 }
+
+// Filtro: embudo invertido con tallo. Para botones "Filtros avanzados" en
+// las pantallas de gestion (Tarea 24) y futuros filtros en pantallas
+// personal (Tarea 25).
+export function IconFiltro({ size = 20, className = '' }) {
+  return (
+    <Svg size={size} className={className}>
+      <path d="M4 5h16l-6 8v6l-4-2v-4z" />
+    </Svg>
+  );
+}

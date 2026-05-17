@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto — Sánchez e Hijos SpA</title>
-
+    <link rel="icon" type="image/x-icon" href="/img/icono.ico" />
     <!-- Google Fonts: Roboto Slab (headings) + Open Sans (cuerpo) -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
@@ -21,8 +21,12 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <!-- Marca -->
-                <a class="navbar-brand" href="../index.html">Sánchez e Hijos SpA</a>
+                <!-- Marca: logo corporativo (Tarea 26) -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/header_oscuro.png"
+                        alt="Sánchez e Hijos SpA"
+                        class="navbar-logo">
+                </a>
 
                 <!-- Botón hamburguesa (responsive) -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -49,6 +53,15 @@
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
+
+                    <!-- CTA "Acceso intranet" — separado visualmente del menú principal (Tarea 26).
+                        ml-lg-3: separación a la izquierda en escritorio. mt-2 mt-lg-0: respiro
+                        vertical cuando el navbar colapsa en móvil. -->
+                    <a class="btn btn-acceso-intranet ml-lg-3 mt-2 mt-lg-0"
+                    href="../intranet/dist/index.html"
+                    target="_blank" rel="noopener noreferrer">
+                        Acceso intranet
+                    </a>
                 </div>
             </div>
         </nav>
@@ -176,6 +189,11 @@
         <div class="container text-center">
             <p>&copy; <span id="anio-footer">2026</span> Sánchez e Hijos SpA. Todos los derechos reservados.</p>
             <p>
+                <!-- Acceso intranet (Tarea 26) -->
+                <a href="../intranet/dist/index.html" target="_blank" rel="noopener noreferrer">
+                    Acceso intranet
+                </a>
+                <span class="footer-sep" aria-hidden="true">·</span>
                 <a href="https://github.com/eliascastrosalazar91/Sanchez_Hijos_Web" target="_blank" rel="noopener noreferrer">
                     Ver repositorio en GitHub
                 </a>
